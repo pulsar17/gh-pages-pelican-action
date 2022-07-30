@@ -1,4 +1,4 @@
-name: GitHub Pages Pelican Build Action
+name: Pelican Build Action
 description: This action builds a Pelican project and deploys it to GitHub Pages.
 
 branding:
