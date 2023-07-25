@@ -11,13 +11,6 @@ remote_branch=${GH_PAGES_BRANCH:=gh-pages}
 echo 'Installing Python Requirements 🐍 '
 pip install -r requirements.txt
 
-if [ -n "$PELICAN_THEME_FOLDER" ]; then
-    echo 'Installing Node Modules 🧰 '
-    pushd $PELICAN_THEME_FOLDER
-    npm install
-    popd
-fi
-
 echo 'Building site 👷 '
 pelican ${PELICAN_CONTENT_FOLDER:=content} -o output -s ${PELICAN_CONFIG_FILE:=pelicanconf.py}
 
