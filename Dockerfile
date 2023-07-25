@@ -13,11 +13,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
 RUN apt-get update \
-    && apt-get install --no-install-recommends -qy git curl bash
-
-
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt-get install -y nodejs
+    && apt-get install --no-install-recommends -qy git
 
 COPY entrypoint.sh /entrypoint.sh
 
